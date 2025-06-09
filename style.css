@@ -1,0 +1,58 @@
+body, html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Libre";
+}
+
+@font-face {
+    font-family: "Libre";
+    src: url("/fonts/LibreBaskerville-Regular.ttf");
+}
+
+header {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 85vh;
+}
+
+.library-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    justify-content: left;
+    margin: 2rem;
+}
+
+.library-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    height: 260px;
+    padding: 1rem;
+}
+
+#add-book {
+    all: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 260px;
+    border: 1px solid black;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#add-book:hover {
+    background-color: lightgray;
+}
