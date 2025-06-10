@@ -2,12 +2,16 @@ body, html {
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: "Libre";
 }
 
 @font-face {
-    font-family: "Libre";
-    src: url("/fonts/LibreBaskerville-Regular.ttf");
+    font-family: "Lora";
+    src: url("/fonts/Lora-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("/fonts/Poppins-Medium.ttf");
 }
 
 header {
@@ -15,6 +19,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Lora";
 }
 
 main {
@@ -27,6 +32,7 @@ main {
     gap: 1rem;
     justify-content: left;
     margin: 2rem;
+    font-family: "Poppins"
 }
 
 .library-card {
@@ -34,9 +40,14 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
-    height: 260px;
+    border-radius: 10px;
+    height: 400px;
     padding: 1rem;
+    background-color: #536878;
+}
+
+.library-card h1 {
+    color: #EAE0C8;
 }
 
 #add-book {
@@ -46,13 +57,64 @@ main {
     align-items: center;
     text-align: center;
     justify-content: center;
-    height: 260px;
+    height: 400px;
     border: 1px solid black;
+    border-radius: 10px;
     padding: 1rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.1s ease;
 }
 
 #add-book:hover {
     background-color: lightgray;
+}
+
+.add-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    font-family: "Poppins";
+
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.4s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hidden {
+    display: none;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+.input-container {
+    display: flex;
+    gap: 0.5rem;
 }

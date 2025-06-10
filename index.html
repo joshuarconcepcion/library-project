@@ -7,22 +7,48 @@
     <link rel = "stylesheet" href = "style.css">
     <title>Odin Library</title>
 </head>
-<body>
-    <div class = "library">
-        <header>
-            <h1>LIBRARY</h1>
-        </header>
+    <body>
+        <div class = "library">
+            <header>
+                <h1>Library</h1>
+            </header>
 
-        <main>
-            <div class = "library-cards">
-                <div class = "library-card">
-                    <h1>The Hobbit</h1>
+            <main>
+                <div class = "library-cards">
+                    <div class = "library-card">
+                        <h1>The Hobbit</h1>
+                    </div>
+                    <button class = "library-card" id = "add-book">+ <br>Add Book</button>
                 </div>
-                <button class = "library-card" id = "add-book">+ <br>Add Book</button>
 
-                
-            </div>
-        </main>
-    </div>
-</body>
+                <div class = "add-modal hidden">
+                    <div class = "modal-content">
+                        <h2>Add Book Information</h2>
+                        <div class = "input-container">
+                            <label for = "book_title">Title:</label>
+                            <input type = "text" placeholder = "The Hobbit" name = "book_title" id = "book-title">
+                        </div>
+                        <div class = "input-container">
+                            <label for = "book_author">Author:</label>
+                            <input type = "text" placeholder = "J.R.R Tolkien" name = "book_author" id = "book-author">
+                        </div>
+                        <div class = "input-container">
+                            <label for = "book_status">Status:</label>
+                            <select name = "book_status" id = "read-status" required>
+                                <option value = "" disabled selected hidden>Select a Status</option>
+                                <option value = "not-read">Not Read</option>
+                                <option value = "to-read">Want to Read</option>
+                                <option value = "reading">Reading</option>
+                                <option value = "completed">Completed</option>
+                                <option value = "dropped">Dropped</option>
+                            </select>
+                        </div>
+                        <div class = "input-container">
+                            <input type = "submit" name = "book_submit" id = "submit-btn" value = "Submit">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
 </html>
