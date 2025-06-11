@@ -37,6 +37,7 @@ main {
 
 .library-card {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -44,9 +45,6 @@ main {
     height: 400px;
     padding: 1rem;
     background-color: #536878;
-}
-
-.library-card h1 {
     color: #EAE0C8;
 }
 
